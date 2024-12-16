@@ -1,0 +1,134 @@
+:root {
+    --card-border-color: #007BFF;
+    /* Значение по умолчанию */
+}
+
+.slide {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Максимальная прозрачность для белого слайда */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    /* z-index для слайда */
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+}
+
+.slide-content {
+    position: relative;
+    z-index: 2;
+    /* Убедимся, что контент находится над изображением */
+}
+
+.slide-title {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333333;
+    /* Темный текст */
+    font-weight: bold;
+    padding-top: 60px;
+    /* Добавлено расстояние сверху */
+}
+
+.gelios-image {
+    position: absolute;
+    top: -100px;
+    /* Размещаем изображение над блоком */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    z-index: 3;
+    /* z-index для изображения, чтобы оно было над прозрачным блоком */
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background-color: #e0e0e0;
+    /* Светлый фон для карточек */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--card-border-color);
+    animation: border-pulse 1.5s infinite;
+}
+
+@keyframes border-pulse {
+    0% {
+        border-color: var(--card-border-color);
+    }
+
+    50% {
+        border-color: var(--card-border-color);
+    }
+
+    100% {
+        border-color: var(--card-border-color);
+    }
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 20px;
+    color: #333333;
+    /* Темный текст */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #666666;
+    /* Светлый текст */
+}
