@@ -18,6 +18,7 @@ body {
 }
 
 .home-button {
+  border: none;
   position: absolute;
   bottom: 10px;
   /* Расположение внизу */
@@ -110,6 +111,7 @@ body {
 
 button.arrow {
   background: none;
+  border: none;
   color: #e0e0e0;
   /* Темный цвет для стрелок */
   font-size: 100px;
