@@ -165,13 +165,16 @@ const App: React.FC = () => {
             <div className="slider-container">
                 <div className="slider">
                     <div className="navigation">
-                        {currentSlide > 0 && (
-                            <>
-                                <button className="arrow left" onClick={prevSlide}>&#9664;</button>
-                            </>
+                        {currentSlide > 0 ? (
+                            <button className="arrow left" onClick={prevSlide}>&#9664;</button>
+                        ) : (
+                            <div className="arrow-placeholder"></div> /* Невидимый элемент */
                         )}
-                        {currentSlide < slides.length - 1 && <button className="arrow right" onClick={nextSlide}>&#9654;</button>}
+                        {currentSlide < slides.length - 1 && (
+                            <button className="arrow right" onClick={nextSlide}>&#9654;</button>
+                        )}
                     </div>
+
                     {slides.map((slide, index) => (
                         <Slide
                             key={index}
