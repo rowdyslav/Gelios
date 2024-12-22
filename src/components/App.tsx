@@ -97,7 +97,6 @@ const App: React.FC = () => {
                         title: item,
                         description: ''
                     })),
-                    image: '/geliosart.png' // Добавляем изображение в слайд
                 },
                 {
                     title: `Если будешь усердно учиться, ты можешь стать`,
@@ -105,7 +104,6 @@ const App: React.FC = () => {
                         title: item,
                         description: ''
                     })),
-                    image: '/gelios_him.png' // Добавляем изображение в слайд
                 },
                 {
                     title: `Получить качественное образование в нашем регионе`,
@@ -113,7 +111,10 @@ const App: React.FC = () => {
                         title: item,
                         description: ''
                     })),
-                    image: '/gelios_tech.png' // Добавляем изображение в слайд
+                },
+                {
+                    title: `Поздравляем, ты простроил свою карьерную траекторию в Рязанской области. Развивайся вместе с нами!`,
+                    cards: []
                 }
             ];
 
@@ -139,19 +140,19 @@ const App: React.FC = () => {
     const getCardBorderColor = () => {
         switch (selectedActivity) {
             case 'physical':
-                return '#ff4b4b';
+                return 'rgba(255,75,75,0)';
             case 'science':
-                return '#ffd700';
+                return 'rgba(255,215,0,0)';
             case 'tech':
-                return '#800080';
+                return 'rgba(128,0,128,0)';
             case 'art':
-                return '#ff4b4b';
+                return 'rgba(255,75,75,0)';
             case 'intellectual':
-                return '';
+                return 'rgba(255,75,75,0)';
             case 'social':
-                return '#ff4b4b';
+                return 'rgba(255,75,75,0)';
             default:
-                return '#007BFF';
+                return 'rgba(255,255,255,0)';
         }
     };
 

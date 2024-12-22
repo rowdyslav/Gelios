@@ -37,12 +37,12 @@
 }
 
 .slide-title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 28px;
     color: #333333;
     /* Темный текст */
     font-weight: bold;
-    padding-top: 60px;
+    padding-top: 0px;
     /* Добавлено расстояние сверху */
 }
 

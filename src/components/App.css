@@ -18,25 +18,50 @@ body {
 }
 
 .home-button {
-  border: none;
-  position: absolute;
-  bottom: 10px;
+  width: 180px;
+  height: 60px;
+  border: 1px solid #ae0505;
+  position: relative;
+  bottom: -20px;
   /* Расположение внизу */
   left: 10px;
   /* Расположение слева */
-  background-color: #e0e0e0;
-  color: #333333;
+  background: transparent;
+  background-color: #f16363;
+  color: #000000;
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 19px;
+  outline: none;
   z-index: 10;
-  transition: background-color 0.3s ease;
+  transition: 1s ease-in-out;
 }
 
 .home-button:hover {
-  background-color: #0056b3;
-  color: white
+  transition: 1s ease-in-out;
+  background: #fd0c0c;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.home-button:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.home-button span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
 }
 
 
@@ -51,16 +76,6 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-}
-
-.gelios-image {
-  position: absolute;
-  top: 20px;
-  /* Прикрепляем изображение к верху блока */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px;
-  animation: slideUp 1s ease-out;
 }
 
 @keyframes slideUp {
@@ -112,7 +127,7 @@ body {
 button.arrow {
   background: none;
   border: none;
-  color: #e0e0e0;
+  color: #ff6363;
   /* Темный цвет для стрелок */
   font-size: 100px;
   cursor: pointer;

@@ -25,7 +25,6 @@ interface SlideProps {
 const Slide: React.FC<SlideProps> = ({ title, cards, isActive, cardBorderColor, image }) => {
     return (
         <div className={`slide ${isActive ? 'active' : ''}`} style={{ '--card-border-color': cardBorderColor } as React.CSSProperties}>
-            {image && <img src={image} alt="Gelios" className="gelios-image" />} {/* Добавляем изображение в слайд */}
             <div className="slide-content">
                 <h2 className="slide-title">{title}</h2>
                 <div className="cards-container">
