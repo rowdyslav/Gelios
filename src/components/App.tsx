@@ -186,7 +186,7 @@ const App: React.FC = () => {
                             image={(slide as SlideData).image}
                         />
                     ))}
-                    {currentSlide > 0 && (
+                    {!slides[0].cards[0].hasOwnProperty('icon') && (
                         <>
                             <button className="home-button" onClick={goToHome}>Домой</button>
                         </>

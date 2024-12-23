@@ -85,12 +85,23 @@
     width: 250px;
     padding: 20px;
     text-align: center;
+    border: 2px solid transparent;
+}
+
+.initial-card {
+    background-color: #e0e0e0;
+    /* Светлый фон для карточек */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
     cursor: pointer;
     border: 2px solid transparent;
 }
 
-.card:hover {
+.initial-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border: 2px solid var(--card-border-color);
